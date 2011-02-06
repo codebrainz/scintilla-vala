@@ -111,7 +111,7 @@ namespace Scintilla
 	}
 	
 	[CCode(cprefix="SC_EOL_",cname="int",has_type_id=false)]
-	public enum EndOfLines
+	public enum EolTypes
 	{
 		CRLF,
 		CR,
