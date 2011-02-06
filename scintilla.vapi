@@ -58,11 +58,10 @@ namespace Scintilla
 		 */
 		[CCode(cname="scintilla_release_resources")]
 		public void release_resources();
-
-        public signal void sci_notify(int param, 
+		
+		public signal void sci_notify(int param,
 			[CCode(type="gpointer")]Scintilla.Notification* notif);
-			//[CCode(type="gpointer")]Scintilla.Object sci);
-        	                    
+			
 	}
 
 	
@@ -82,23 +81,23 @@ namespace Scintilla
 		// SCN_STYLENEEDED, SCN_DOUBLECLICK, SCN_MODIFIED, SCN_DWELLSTART,
 		// SCN_DWELLEND, SCN_CALLTIPCLICK,
 		// SCN_HOTSPOTCLICK, SCN_HOTSPOTDOUBLECLICK, SCN_HOTSPOTRELEASECLICK
-		int ch;             // SCN_CHARADDED, SCN_KEY
+		int ch;			 // SCN_CHARADDED, SCN_KEY
 		int modifiers;
 		// SCN_KEY, SCN_DOUBLECLICK, SCN_HOTSPOTCLICK, SCN_HOTSPOTDOUBLECLICK, SCN_HOTSPOTRELEASECLICK
 		int modificationType; // SCN_MODIFIED
-		string text;        // SCN_MODIFIED, SCN_USERLISTSELECTION, SCN_AUTOCSELECTION
-		int length;         // SCN_MODIFIED
-		int linesAdded;     // SCN_MODIFIED
-		int message;        // SCN_MACRORECORD
-		ulong wParam;       // SCN_MACRORECORD
-		long lParam;        // SCN_MACRORECORD
-		int line;           // SCN_MODIFIED, SCN_DOUBLECLICK
+		string text;		// SCN_MODIFIED, SCN_USERLISTSELECTION, SCN_AUTOCSELECTION
+		int length;		 // SCN_MODIFIED
+		int linesAdded;	 // SCN_MODIFIED
+		int message;		// SCN_MACRORECORD
+		ulong wParam;	   // SCN_MACRORECORD
+		long lParam;		// SCN_MACRORECORD
+		int line;		   // SCN_MODIFIED, SCN_DOUBLECLICK
 		int foldLevelNow;   // SCN_MODIFIED
 		int foldLevelPrev;  // SCN_MODIFIED
-		int margin;         // SCN_MARGINCLICK
-		int listType;       // SCN_USERLISTSELECTION, SCN_AUTOCSELECTION
-		int x;              // SCN_DWELLSTART, SCN_DWELLEND
-		int y;              // SCN_DWELLSTART, SCN_DWELLEND
+		int margin;		 // SCN_MARGINCLICK
+		int listType;	   // SCN_USERLISTSELECTION, SCN_AUTOCSELECTION
+		int x;			  // SCN_DWELLSTART, SCN_DWELLEND
+		int y;			  // SCN_DWELLSTART, SCN_DWELLEND
 	}
 	
 	[CCode(cprefix="SC_IV_",cname="int",has_type_id=false)]
